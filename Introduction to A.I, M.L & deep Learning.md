@@ -70,3 +70,31 @@ Example:
         * y = (0.5*2 + 0.8*3 + 0.3)
         * y = (1+2.4+0.3)
         * y = 3.7
+
+# What is Machine Learning?
+Machine learning is a subset of artificial intelligence that focuses on developing algorithms and models that enable computers to learn from data without being explicitly programmed. ML allows machines to improve their performance on a given task by analyzing large amounts of data.
+
+- Instead of writing rules we provide the data and it will figure out the patterns or relationships on its own.
+- as more data is given to the model, it becomes better at predicting outcomes and performs well on new unseen data.
+- Instead of programming manually, the algorithm learns the rules from the data.
+- It has different types of tasks depending on the problem you are solving. eg: classification, regression, clustering etc.
+## Types of Machine Learning:
+- Supervised learning: The algorithm is trained using labeled data, where both input and desired output are provided. It learns to predict the correct output for new instances.
+- Unsupervised learning: The algorithm works with unlabeled data, discovering patterns and structures within the data itself.
+- Reinforcement learning: An agent interacts with an environment, receiving rewards or penalties based on actions taken. It learns optimal behavior through trial and error.
+
+AI is not equal to ML 
+- AI, it can be any model or system that mimics human intelligence.
+- ML is a type of AI that uses statistical methods to learn from data and make predictions or decisions.
+
+# What is Deep Learning?
+Deep learning is a subfield of machine learning focused on artificial neural networks with multiple layers. The structure is inspired by the human brain. It is designed so that it can learn from large amount of data. It excels at processing complex data like images, audio, and text. By training these networks on vast datasets, deep learning achieves remarkable results in areas like image recognition, natural language understanding, and speech synthesis.
+
+- Artificial neural network uses nodes and connections to process information. 
+- It can process complex patterns and relationships in data.
+- It is used for tasks like image recognition, natural language processing, speech recognition etc.
+- It is more advanced then traditional machine learning models.
+- It can understand very complicated patterns in data such as recognizing face or translating languages.
+- It has multiple layers of learning and processing units called neurons. As it has multiple layers it is called deep learning.
+- It has multiple layers because each layer extract different levels of features from the input data.
+
