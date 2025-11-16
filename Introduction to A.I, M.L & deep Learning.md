@@ -61,7 +61,8 @@ Each neuron combines the weighted input and applies an activation function for n
   * weights x inputs - each input has a weight and multiplied with their respective weights.
   * bias - A bias value is added to adjust the position of line.
   * Activation - it goes through an activation process (function), which decides the final output and adds non-linearity to the model.
- Example:
+
+Example:
   * Inputs x1 = 2, x2 = 3
   * Weights w1 = 0.5, w2 = 0.8
   * Bias b = 0.3
