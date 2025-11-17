@@ -185,9 +185,142 @@ Text -> Numbers -> model can understand it.
 - Amazon Lex
 - Amazon Kendra
 - Amazon Translate
+- Amazon Augmented AI
+- Amazon Comprehend Medical & Transcribe Medical
+- Amazon's Hardware for AI
 - Amazon Transcribe
 - Amazon Forecast
 
+# Amazon Bedrock:
+- It is a service provided by AWS to build Gen AI applications.
+- It is fully managed by AWS, we don't need to manage anything.
+- It can control the data used to train the model
+- It follows Pay-Per-use pricing.
+- Unified APIs
+    * It can access and use different foundation models through a single consistent API interface.
+    * Single way to access/use multiple Gen AI models in Amazon Bedrock.
+- Can use a wide range of foundation models.
+
+## RAG (Retrieval-Augmented Generation)
+- It is a technique used to combine an LLm with external data sources.
+- when LLMs don't know private data RAG feeds relevant documents or knowledge to the model at run time.
+
+## Bedrock - Base foundation models:
+- Amazon Titan
+- Anthropic Claude
+- Cohere Command
+- Meta Llama
+- Stability AI (image models)
+- AI21 Labs
+- Mistral AI (depending on region)
+How to choose a foundation model:
+- Model types, performance, requirements, capabilities, constraints, compliance.
+- Level of customization, model size, inference option, license agreements, context window, latency
+- Multimodal
+- Use cases
+- Performance
+- Cost
+- Availability
+- Compliance
+- Support
+### Tokens
+tokens are chunk of text that are processed by the model. Each token is assigned a unique number.
+The length of the prompt determines the number of tokens.
+Tokens are used to measure the complexity of the prompt and determine the cost of running the model.
+eg: hello world -> it has 2 tokens
+
+### EULA (End User License Agreement):
+- It is a legal agreement between you and the provider of the software.
+- It outlines the terms and conditions under which you may use the software.
+- It includes restrictions on copying, modifying, distributing, or reverse engineering the software.
+- It specifies warranties, liability limitations, indemnification obligations, termination rights, and dispute resolution procedures.
+
+## Amazon Bedrock - Fine Tuning a Model
+- Copy a pre-trained foundation model and train it with our own data.
+- By this the modal will react and respond to our requests which is unique 
+- Fine tuning will charge and change weights of base model.
+- Foundation Modal + S3 = Fine tuned model.
+### Instruction based Fine tuning
+- Improves the performance of FM on domain specific tasks.
+- Further trained on particular field or area ok knowledge 
+- It uses prompt-response pair to train the Foundation Model.
+- Fine-tuning on private data set
+
+### Continued pre-training
+- Pre-training on public data sets
+- It will provide unlabeled data to continue the training of an Foundation model eg: any document, article, book etc.
+- It is also called as domain adaption fine tuning.
+- We can feed more and more data to the model for better accuracy.
+
+### Single Turn Messaging
+- Used for chatbots, customer support, and personalized interactions.
+- It maintains conversation history and responds appropriately.
+- It is a part of instruction based fine tuning.
+- It is a system which contains the context of conversation
+- Messages: Array of message objects
+- Role: User/ assistant
+- Content: Message content
+- Context: Conversation history
+
+### Multi turn messaging
+- It is used for Chatbot and Virtual Assistants
+- Supports long conversations and context management.
+- Maintains memory of previous messages.
+- It is a part of instruction based fine tuning.
+- It is a system which contains the context of conversation
+- Messages: Array of message objects
+- Role: User/ assistant
+- Content: Message content
+- Context: Conversation history
+
+### Transfer Learning
+- In this when a model is trained on specific domain it can be reused to different domain and it will work perfectly fine.
+- Fine tune is kind of transfer learning.
+- It is a method of transferring knowledge from one model to another.
+
+### Amazon Bedrock - Evaluating a model
+- By Automatic Evaluation we can easily find the desired foundation model.
+- Evaluate a model for quality control and then train the model accordingly.
+- Built-in task types:
+    * Text summarization
+    * Question and answer
+    * text classification
+    * Open ended text generation
+
+#### How it works: 
+    Benchmark Questions -> Model to evaluate -> Generate Answers -> Compare Answers -> Get Score
+- Grading or Model scores are calculated using various statical methods:
+- Manual/Human evaluation:
+    * Human evaluators assess the quality of generated responses.
+    * Provide feedback on correctness, relevance, clarity, and coherence.
+    * Identify areas for improvement and refine the model further.
+- Benchmark Datasets
+    * It is helpful to measure accuracy, speed, scalability, and efficiency.
+    * Some datasets allow you to quickly detect any kind of bias and potential discrimination against a group of people 
+
+- Accuracy
+### Metrics to evaluate a model: (Not sure about it need to learn)
+- Precision
+- Recall
+- F1 score
+- BLEU(blue Language Evaluation Utility) score
+- ROUGE score
+- Perplexity
+
+### Amazon Bedrock - RAG & Knowledge base
+- It allows a foundation model to refer a data source outside of its training data.
+    * Eg: Training data source is S3 but the required data is not in S3 then it will refer to other data source outside of its training data i.e: Vector database.
+- When AI fails to retrieve data from its training data then it falls back to another data source like a vector database to retrieve the required data.
+- It is used where real-time data is needed and the data is updated frequently.
+### Vector Database
+- It stores the previously asked quires and allows to quickly search for similar ones.
+- How it works: Input text -> Embedding model -> Vector database -> similar queries -> Answer.
+
+### Embedding model
+- It is a type of AI model that converts data like text, images, video into a list of numbers that capture the meaning of data.
+- So that similar text or idea gets similar numbers.
+
+### 
 # Amazon Bedrock:
 Amazon bedrock is a service that provides access to large language models(LLM). It offers pre-trained LLMs and custom models built on top of these foundations.
 AWS Bedrock is a serverless platform that lets you use pre-trained Gen AI foundation model
@@ -261,10 +394,12 @@ It is fully managed service, we don't have to worry about it anymore.
     * Our prompts are not used to train, improve, fine-tune models or build datasets.
     * No Long-term storage
 
-## Integration with the AWS ecosystem
+## (need to rewrite)Integration with the AWS ecosystem
 AWS Bedrock goes beyond providing powerful models it integrates with other AWS services to support end-to-end AI workflows. Some integrations include:
 - Amazon SageMaker: Enables fine-tuning of foundation models to meet specific requirements.
 - AWS Lambda: Facilitates event-driven AI applications, such as triggering a model to fine-tune new data or review inference results.
 - Amazon CloudWatch: Provides monitoring and logging capabilities for analyzing model performance and gathering user feedback.
 - Amazon S3: Serves as a storage solution for datasets, enabling performance tracking and cost analysis.
+
+# Amazon SageMaker:
 
