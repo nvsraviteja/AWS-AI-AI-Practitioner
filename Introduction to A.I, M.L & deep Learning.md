@@ -261,4 +261,10 @@ It is fully managed service, we don't have to worry about it anymore.
     * Our prompts are not used to train, improve, fine-tune models or build datasets.
     * No Long-term storage
 
+## Integration with the AWS ecosystem
+AWS Bedrock goes beyond providing powerful models it integrates with other AWS services to support end-to-end AI workflows. Some integrations include:
+- Amazon SageMaker: Enables fine-tuning of foundation models to meet specific requirements.
+- AWS Lambda: Facilitates event-driven AI applications, such as triggering a model to fine-tune new data or review inference results.
+- Amazon CloudWatch: Provides monitoring and logging capabilities for analyzing model performance and gathering user feedback.
+- Amazon S3: Serves as a storage solution for datasets, enabling performance tracking and cost analysis.
 
