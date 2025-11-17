@@ -188,4 +188,77 @@ Text -> Numbers -> model can understand it.
 - Amazon Transcribe
 - Amazon Forecast
 
+# Amazon Bedrock:
+Amazon bedrock is a service that provides access to large language models(LLM). It offers pre-trained LLMs and custom models built on top of these foundations.
+AWS Bedrock is a serverless platform that lets you use pre-trained Gen AI foundation model
+It is fully managed service, we don't have to worry about it anymore.
+- Amazon Bedrock is like a app store for AI models. We just pick the model, customize it, and deploy our own AI app and AWS handles everything behind the scenes.
+
+## Why Bedrock Exists:
+- Before Bedrock:
+    - You needed GPUs
+    - Huge training costs
+    - Complex model hosting
+    - Hard to switch between models
+    - Security risks
+- With Bedrock:
+    - No infrastructure
+    - Pay per request
+    - Enterprise security
+    - Models from many vendors
+    - Easy model switching
+
+## What Bedrock Provides:
+1. Foundation Models - These are huge pre-trained AI models that perform:
+    * Text generation
+    * Chat 
+    * Code generation
+    * Image generation
+    * Embeddings
+    * Multi modal tasks
+ - Providers inside Bedrock:
+    - Amazon Titan
+    - Anthropic Claude
+    - Cohere Command
+    - Meta Llama
+    - Stability AI (image models)
+    - AI21 Labs
+    - Mistral AI (depending on region)'
+
+2. Customization Methods - Bedrock lets you tailor a model to your business needs by:
+    - Fine-tuning - Train the model on your own data or requirements
+    - RAG (Retrieval-Augmented Generation) - we can connect our own data or private documents, it reads them and gives accurate answers.
+        * this is handled by Bedrock knowledge bases.
+    - Agents - Create AI bots or assistants that can interact with users and answer questions.
+        * Call APIs, Query database, Make decisions, Trigger actions.
+    - Prompt Engineering - Customize prompts to get desired responses.
+3. Serverless inference (inference is an idea or conclusion that's drawn from evidence and reasoning)
+    - This is the biggest advantage:
+        * No EC2
+        * No GPUs
+        * No containers
+        * No scaling issues
+        * AWS handles everything
+    - You only pay for:
+        * Input tokens
+        * Output tokens
+        * Model customizations
+4. Enterprise Level Security:
+* IAM Access Control
+    * No API key exposure - This is why companies trust Bedrock more than external AI APIs (OpenAI, Gemini, etc.).
+* VPC Endpoints
+    * VPC endpoints allows a private connection between your VPC and AWS services, without needing an internet gateway
+* Encryption in transit and rest
+    * In Transit - Whenever your application talks to Bedrock:
+        * Data is encrypted using HTTPS/TLS
+        * Prevents man in the middle attacks
+        * Ensures safe communication
+    * At Rest - Any data that Bedrock temporarily stores is encrypted using AWS KMS when data is stored in Bedrock:
+        * Protects against unauthorized access
+        * Ensures secure storage
+* No Data retention
+    * Bedrock does not store, train or learn from your data.
+    * Our prompts are not used to train, improve, fine-tune models or build datasets.
+    * No Long-term storage
+
 
