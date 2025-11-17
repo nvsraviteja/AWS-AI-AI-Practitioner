@@ -87,8 +87,23 @@ AI is not equal to ML
 - AI, it can be any model or system that mimics human intelligence.
 - ML is a type of AI that uses statistical methods to learn from data and make predictions or decisions.
 
+# Core ML Terminologies (Very imp for exam)
+* Dataset
+    * The collection of input data used to train a model.
+* Training
+    * Process where model learns patterns using training data.
+* Inference
+    * Using the trained model to make predictions.
+* Model
+    * The learned pattern or rule extracted from training data.
+    * The “brain” created after training.
+* Feature
+    * Input variables used for prediction.
+* Label
+    * Correct answers in supervised learning.
+
 # What is Deep Learning?
-Deep learning is a subfield of machine learning focused on artificial neural networks with multiple layers. The structure is inspired by the human brain. It is designed so that it can learn from large amount of data. It excels at processing complex data like images, audio, and text. By training these networks on vast datasets, deep learning achieves remarkable results in areas like image recognition, natural language understanding, and speech synthesis.
+Deep learning is a subset of machine learning focused on artificial neural networks with multiple layers. The structure is inspired by the human brain. It is designed so that it can learn from large amount of data. It excels at processing complex data like images, audio, and text. By training these networks on vast datasets, deep learning achieves remarkable results in areas like image recognition, natural language understanding, and speech synthesis.
 
 - Artificial neural network uses nodes and connections to process information. 
 - It can process complex patterns and relationships in data.
@@ -97,4 +112,80 @@ Deep learning is a subfield of machine learning focused on artificial neural net
 - It can understand very complicated patterns in data such as recognizing face or translating languages.
 - It has multiple layers of learning and processing units called neurons. As it has multiple layers it is called deep learning.
 - It has multiple layers because each layer extract different levels of features from the input data.
+
+# What is Generative AI?
+Generative AI is a subset of Deep learning which refers to AI systems capable of creating original content, such as text, images, music, or videos. They generate new material rather than just classifying existing data. This technology leverages powerful algorithms and large datasets to produce creative outputs.
+
+- It generates new content instead of just classifying existing data.
+- It creates original content like text, images, music, or videos.
+- It uses powerful algorithms and large datasets to produce creative outputs.
+- It is used for tasks like generating art, writing stories, composing music, designing products etc.
+- It is used in industries like advertising, marketing, gaming, education etc.
+- It is used to create realistic images, animations, and simulations.
+ Generative AI uses models to generate data which it is trained on.
+Major types of Gen AI Models:
+- Foundation Models
+- Large Language Models (LLMs)
+- Diffusion Models
+- GANs (Generative Adversarial Networks)
+- VAEs (Variational Autoencoders)
+- Autoregressive Models (Non-LLM)
+- Flow-based Models
+- Retrieval-Augmented Models (RAG Models)
+- Multimodal Models
+- Vision-Language Models (VLMs)
+- Reinforcement Learning–Based Generative Models
+
+# What is foundation Model?
+It is a large general purpose AI model trained on a huge amount of data that can be adapted for many different tasks. They serve as a starting point for specialized models tailored to specific needs.
+By this we can build or tune our AI accordingly instead of building from scratch.
+It can be reused across multiple projects and tasks, saving development time and resources.
+This models are trained on a wide variety of input data.
+
+# What is Large Language Model(LLM)?
+Large language models are a type of generative AI model specifically designed for understanding and generating human-like text. 
+They are trained on very large amount of text data.
+LLM learns the patterns and structure of language by reading lot of text, articles
+They excel at tasks like language translation, summarization, question answering, and even creative writing.
+LLMs have achieved remarkable success due to their ability to understand context and generate coherent responses.
+LLMs can perform tasks like:
+- Text generation
+- Translation
+- Summarization
+- Question answering
+- Creative writing and content
+
+# what is Transformers? 
+A transformer is an advanced architecture used in deep learning models.
+They are particularly useful for Natural Language Processing(NLP).
+It process a sentence as a whole and assign importance to each word in the sentence.
+Older models that process one word at a time transformers take the entire sentence at once together and decide how important each word is.
+this enables them to understand the context better.
+It uses attention mechanism so that it can assign more importance to specific words in the sentence.
+
+## What it can do 
+- Understand text
+- Generates human like text
+- FAQ
+- Summarizing 
+- translation
+- creating conversational agents
+
+# What is Embeddings?
+Embeddings are numerical representations of words or phrases in a high-dimensional space. They capture semantic meaning and allow similarity comparisons.
+Text -> Numbers -> model can understand it.
+
+# AWS AI Services:
+- Amazon Bedrock
+- Amazon SageMaker
+- Amazon Rekognition
+- Amazon Textract
+- Amazon Comprehend
+- Amazon Polly
+- Amazon Lex
+- Amazon Kendra
+- Amazon Translate
+- Amazon Transcribe
+- Amazon Forecast
+
 
