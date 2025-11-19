@@ -464,7 +464,54 @@ In cloudwatch we have some metrics, logs & alarms.
     * Requires a large Computation.
     * Most expensive among all techniques.
 
-###
+## Prompt Engineering:
+- Prompt is an instruction given to the model to get the desired output.
+- To archive the expected output from AI then the instruction given should be proper and clear.
+- Developing designing and optimizing prompts to enhance the output of AI.
+- Improved prompting technique consists of:
+    * Instructions - a task for the model
+    * Context - external info to guide the model
+    * Input data - what response we want
+    * Output indicator - what we expect from the model like type and format.
+
+### Negative Prompting:
+* It is a technique to instruct the model on what not to include in the output.
+- It helps to 
+    * Avoid unwanted context
+    * Maintain focus.
+    * Enhance clarity.
+
+### Prompt Performance Optimization;
+1. System Prompts - We can instruct model that how it should reply or behave.
+    * Example: "You are a helpful assistant."
+2. Temperature (0 to 1) - Controls the creativity of the Model.
+    * Low Temp (0.2) - It gives more accurate, predictable and repetitive answers.
+        * Good for FAQ's.
+        * By this the model will not use it's creativity.
+    * High Temp (1.0) - The model becomes more creative and surprising.
+        * Take risks and generate new ideas or even make up things.
+        * Good for story telling and marketing
+    * Low - Serious, Safe, Repetitive (FAQs, Code)
+    * Medium - balanced, less creative (General, chat)
+    * High - Fun, creative, unpredictable (Stories, adds)
+3. Top P (0 to 1) - It controls how many word choices the AI considers when generating a response - based on their probability of being correct.
+    * eg: Pick a word from the list of words which fits the next word . the size of list depends on the value of P.
+    * Low Top P (0.3) - The model chooses from the top 30%
+    * this makes the ans more consistent.
+    * Used to get accurate and more clarity
+    * High Top P (0.9) - The model chooses from the top 90% of options.
+    * this makes the ans more creative.
+    * Used to get more creative and diverse answers.
+    * Model picks from a large variety of possible words
+    * This creates more diverse and creative response
+    * Good for creative work.
+-- 3. Frequency Penalty (0 to 1) - It penalizes frequent words in the output.
+    * Low FP (0.2) - The model generates more varied outputs.
+    * Used to avoid repetition and encourage diversity in responses.
+    * High FP (1.0) - The model avoids repeating itself.
+    * Used to maintain consistency and reduce redundancy in responses.
+-- 4. Presence Penalty (0 to
+
 # Amazon Bedrock:
 Amazon bedrock is a service that provides access to large language models(LLM). It offers pre-trained LLMs and custom models built on top of these foundations.
 AWS Bedrock is a serverless platform that lets you use pre-trained Gen AI foundation model
