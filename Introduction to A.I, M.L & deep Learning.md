@@ -597,6 +597,8 @@ High-risk content
 #### Model Drift
 This happens when the data or information changes frequently which leads to model inaccuracy or the model accuracy gets dropped 
 - Example: In 2020 you trained a model to predict the price of houses in a city as time changes the price of houses keep increasing but the model still predicts the same old rate.
+
+ik
  
 # Amazon Bedrock:
 Amazon bedrock is a service that provides access to large language models(LLM). It offers pre-trained LLMs and custom models built on top of these foundations.
