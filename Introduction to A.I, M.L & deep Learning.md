@@ -555,22 +555,30 @@ This templates are used to make task easy by providing pre-made questions or ins
 By this users can hijack our prompt and can access the prohibited or harmful content
 * Protection
     - By adding explicit instructions to ignore any potential content
-### AWS AI Services Overview
+## AWS AI Services Overview
 #### AWS Bedrock (Foundation Models (LLMs & GenAI))
 It is like using AI models without giving any training
 Purpose:
+
 ✔ Access LLMs (Claude, Titan, Llama, Mistral, etc.)
+
 ✔ Image models (Stable Diffusion)
+
 ✔ Embedding models
+
 ✔ Agents
+
 ✔ Guardrails
 
 #### AWS Sagemaker (Custom Machine Learning or Custom AI)
 Used to train a ML with own data
 Purpose:
 custom ML models.
+
 ✔ Build
+
 ✔ Train
+
 ✔ Deploy
 
 Used when:
@@ -580,12 +588,20 @@ Used when:
 
 #### Amazon Rekognition (Vision)
 Purpose:
+
 ✔ Image analysis
+
 ✔ Video analysis
+
+
 ✔ Label detection
+
 ✔ Face detection
+
 ✔ Emotion detection
+
 ✔ Moderation
+
 Used for:
 - Security cameras
 - Content moderation
@@ -594,9 +610,13 @@ Used for:
 
 #### Amazon Textract (Document AI)
 Purpose:
+
 ✔ Extract text from documents
+
 ✔ Extract tables
+
 ✔ Extract forms
+
 ✔ Read scanned PDFs
 
 Used for:
@@ -607,12 +627,20 @@ Used for:
 
 #### Amazon Comprehend (Natural Language Processing)
 Purpose:
+
 ✔ Sentiment analysis
+
 ✔ Entity recognition
+
 ✔ Key phrase extraction
+
 ✔ Topics
+
 ✔ PII detection
+
 ✔ Custom classification (high-level)
+
+
 
 Used for:
 - Customer reviews
@@ -621,7 +649,9 @@ Used for:
 
 #### Amazon Polly (Speech AI)
 Purpose:
+
 ✔ Text-to-speech
+
 Use-case:
 - Announcements
 - Voice bots
@@ -630,9 +660,13 @@ Use-case:
 #### Amazon Transcribe (Speech AI)
 
 Purpose:
+
 ✔ Speech-to-text
+
 ✔ Call analytics
+
 ✔ Real-time or batch transcription
+
 
 Use-case:
 - Customer support call analysis
@@ -640,8 +674,11 @@ Use-case:
 
 #### Amazon Lex (Conversational AI)
 Purpose:
+
 ✔ Chatbot builder
+
 ✔ Voice bots
+
 ✔ Conversational agents
 
 Used for:
@@ -651,8 +688,11 @@ Used for:
 
 #### Amazon Kendra (Search)
 Purpose:
+
 ✔ Enterprise search engine
+
 ✔ Natural-language queries
+
 ✔ “Google-like search” for enterprise documents
 Use-case:
 - Company knowledge base
@@ -700,6 +740,7 @@ The AI may generate content which is unfair, skewed for certain groups of people
 
 #### Fairness
 The AI will give fair and behaves equally for all groups of people
+
 ✔ Goal:
 - AI should not favor or discriminate against anyone based on:
     - gender
@@ -707,6 +748,7 @@ The AI will give fair and behaves equally for all groups of people
     - age
     - location
     - or any sensitive attribute
+
 ✔ How to ensure fairness:
 - Balanced training data
 - Bias detection tools (like Clarify)
@@ -716,22 +758,27 @@ The AI will give fair and behaves equally for all groups of people
 
 #### Explainability 
 The AI will ensures you that you can understand why the AI made a decision
+
 ✔ Why it matters:
 - Builds trust
 - Helps debugging models
 - Required for many industries (finance, healthcare, insurance)
+
 ✔ Examples:
 - Why did the model reject a loan?
 - Why did the model detect fraud?
+
 ✔ AWS Services:
 - SageMaker Clarify → feature importance
 - Bedrock Guardrails → helps explain why it blocked content
+
 ✔ Explainability helps:
 - Users trust AI decisions
 - Developers fix errorsAuditors verify compliance
 
 #### Privacy Security
 The AI should protect the user data from misuse and unauthorized access.
+
 
 ✔ Privacy (Protect personal data):
 - Do not store sensitive info unnecessarily
@@ -741,12 +788,14 @@ The AI should protect the user data from misuse and unauthorized access.
 - AWS Bedrock, for example:
     - Does NOT use your prompts to train models
     - No data stored unless you enable logging
+
 ✔ Security (Protect systems & models):
 - Encryption (at rest and in transit)
 - IAM access control
 - VPC endpoints for private access
 - Secure APIs
 - Audit logging (CloudTrail)
+
 ✔ Important for exam:
 - AI responsibility = ensuring models are safe, private, non-harmful, and trustworthy.
 
