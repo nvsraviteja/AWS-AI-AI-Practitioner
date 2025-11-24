@@ -505,12 +505,183 @@ In cloudwatch we have some metrics, logs & alarms.
     * Model picks from a large variety of possible words
     * This creates more diverse and creative response
     * Good for creative work.
--- 3. Frequency Penalty (0 to 1) - It penalizes frequent words in the output.
+4. Top K - it controls how many top possible next words the AI can pick when generating a response 
+    * Pick the next word from the list
+    Low K (10)
+    - Keep response clean and focused
+    - It looks at top 10 most likely words
+    High k (500)
+    - It can choose a wider set of possible words 
+    - make response more creative and unpredictable 
+5. Length - It controls the maximum number of tokens the AI model can generate in a reply
+    - Helps to avoid very long response. 
+6. Stop sequences - By this we tell the model to stop generating response after seeing those special word or symbols.
+7. Prompt Latency - We can say how fast the model responds.
+    - its impacted by few parameters
+        * the model size
+        * model type
+        * No. of tokens in the i/p or o/p
+
+8. Frequency Penalty (0 to 1) - It penalizes frequent words in the output.
     * Low FP (0.2) - The model generates more varied outputs.
     * Used to avoid repetition and encourage diversity in responses.
     * High FP (1.0) - The model avoids repeating itself.
     * Used to maintain consistency and reduce redundancy in responses.
--- 4. Presence Penalty (0 to
+
+### Prompt Engineering Techniques
+#### Zero-Shot Prompting
+* It is a method where a LLM completes a task based on a written instruction, without being given any specific examples of the desired output
+* It will be a task for model because we don't provide examples or any explicit training for that specific task
+* Model's general knowledge will work on the task completely
+* the larger and tuned model, the good results we get
+
+#### Few Shots Prompting
+* It is a technique that provides an AI model with a few examples of a task in the prompt to guide its output.
+* We provide few examples to the model to perform the task
+* if we provide only one example then it is called one shot or single shot
+
+#### Chain of thought Prompting
+* Dividing a task into steps so that we can get a proper answer for the query
+* while solving a complex problem then we can use these type of prompting
+* by sentence like 'think step by step' helps AI to provide a good or best output
+* can be combined with zero and few-shots prompting
+
+### Prompt Templates
+This templates are used to make task easy by providing pre-made questions or instruction 
+* What it do 
+    - Take the user's text and turn it into a well structured prompt for the AI model
+    - Organize and send the AI's response back
+### Prompt Template Injections 
+By this users can hijack our prompt and can access the prohibited or harmful content
+* Protection
+    - By adding explicit instructions to ignore any potential content
+### AWS AI Services Overview
+#### AWS Bedrock (Foundation Models (LLMs & GenAI))
+It is like using AI models without giving any training
+Purpose:
+✔ Access LLMs (Claude, Titan, Llama, Mistral, etc.)
+✔ Image models (Stable Diffusion)
+✔ Embedding models
+✔ Agents
+✔ Guardrails
+
+#### AWS Sagemaker (Custom Machine Learning or Custom AI)
+Used to train a ML with own data
+Purpose:
+custom ML models.
+✔ Build
+✔ Train
+✔ Deploy
+
+Used when:
+- You want your own ML model
+- You need MLOps pipelines
+- You need AutoML (Autopilot)
+
+#### Amazon Rekognition (Vision)
+Purpose:
+✔ Image analysis
+✔ Video analysis
+✔ Label detection
+✔ Face detection
+✔ Emotion detection
+✔ Moderation
+Used for:
+- Security cameras
+- Content moderation
+- Facial analysis
+- Object detection
+
+#### Amazon Textract (Document AI)
+Purpose:
+✔ Extract text from documents
+✔ Extract tables
+✔ Extract forms
+✔ Read scanned PDFs
+
+Used for:
+- Invoices
+- Bills
+- ID cards
+- Contracts
+
+#### Amazon Comprehend (Natural Language Processing)
+Purpose:
+✔ Sentiment analysis
+✔ Entity recognition
+✔ Key phrase extraction
+✔ Topics
+✔ PII detection
+✔ Custom classification (high-level)
+
+Used for:
+- Customer reviews
+- Support tickets
+- Text analytics
+
+#### Amazon Polly (Speech AI)
+Purpose:
+✔ Text-to-speech
+Use-case:
+- Announcements
+- Voice bots
+- Accessibility apps
+
+#### Amazon Transcribe (Speech AI)
+
+Purpose:
+✔ Speech-to-text
+✔ Call analytics
+✔ Real-time or batch transcription
+
+Use-case:
+- Customer support call analysis
+- Meeting transcription
+
+#### Amazon Lex (Conversational AI)
+Purpose:
+✔ Chatbot builder
+✔ Voice bots
+✔ Conversational agents
+
+Used for:
+- Customer service chatbots
+- IVR systems
+- Booking assistants
+
+#### Amazon Kendra (Search)
+Purpose:
+✔ Enterprise search engine
+✔ Natural-language queries
+✔ “Google-like search” for enterprise documents
+Use-case:
+- Company knowledge base
+- Internal document search
+
+| Scenario                    | AWS Service       |
+| --------------------------- | ----------------- |
+| Use LLMs / GenAI            | **Bedrock**       |
+| --------------------------- | ----------------- |
+| Fine-tune models            | **SageMaker**     |
+| --------------------------- | ----------------- |
+| Image recognition           | **Rekognition**   |
+| --------------------------- | ----------------- |
+| Extract text from documents | **Textract**      |
+| --------------------------- | ----------------- |
+| Sentiment analysis          | **Comprehend**    |
+| --------------------------- | ----------------- |
+| Speech → text               | **Transcribe**    |
+| --------------------------- | ----------------- |
+| Text → speech               | **Polly**         |
+| --------------------------- | ----------------- |
+| Build chatbot               | **Lex**           |
+| --------------------------- | ----------------- |
+| Enterprise search           | **Kendra**        |
+| --------------------------- | ----------------- |
+| Custom ML training          | **SageMaker**     |
+| --------------------------- | ----------------- |
+| Document QA with your data  | **Bedrock + RAG** |
+| --------------------------- | ----------------- |
 
 ### AI Responsibilities
 While building a model it is very important to make sure the AI is safe, fair, and trustworthy.
@@ -598,7 +769,7 @@ High-risk content
 This happens when the data or information changes frequently which leads to model inaccuracy or the model accuracy gets dropped 
 - Example: In 2020 you trained a model to predict the price of houses in a city as time changes the price of houses keep increasing but the model still predicts the same old rate.
 
-ik
+
  
 # Amazon Bedrock:
 Amazon bedrock is a service that provides access to large language models(LLM). It offers pre-trained LLMs and custom models built on top of these foundations.
