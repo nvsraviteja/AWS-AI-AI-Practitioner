@@ -688,10 +688,12 @@ The AI may generate content which is unfair, skewed for certain groups of people
 - Human bias in labeling
 - Sampling errors
 - Underrepresented categories
+
 ✔ Effects:
 - Unfair predictions
 - Discrimination
 - Poor user experience
+
 ✔ AWS Tools to reduce bias:
 - SageMaker Clarify → detects & explains bias in datasets and models
 - Responsible AI Guardrails (Bedrock)
@@ -758,8 +760,52 @@ High-risk content
 This happens when the data or information changes frequently which leads to model inaccuracy or the model accuracy gets dropped 
 - Example: In 2020 you trained a model to predict the price of houses in a city as time changes the price of houses keep increasing but the model still predicts the same old rate.
 
+# Amazon Sagemaker
+It is a fully managed AWS service that provides tools and infrastructure for building, training, and deploying machine learning models.
+It simplifies the workflow of ML by enabling data scientists and developers to create, train, and deploy models quickly and efficiently.
+In a normal machine learning project, you follow these main steps:
+- Collect, clean, and understand the data.
+- Create and choose the right features.
+- Train the model and adjust its settings.
+- Deploy the model and keep monitoring it.
+Each step normally needs different tools and experts, but Amazon SageMaker combines all of these stages into one unified platform.
 
- 
+#### Benefits of Amazon Sagemaker
+- End-to-end ML service: 
+    * Covers the entire ML lifecycle — data prep, training, deployment, and monitoring — all in one place.
+- Integrated IDE: 
+    * SageMaker Studio lets you build, train, and deploy models from a single interface.
+- Easy to use: 
+    * Tools like Autopilot allow even non-coders to create high-quality models quickly.
+- Scalable: 
+    * Automatically scales resources for training and inference without manual setup.
+- Cost-effective: 
+    * Features like Spot Training and multi-model endpoints help reduce costs.
+- Supports all major ML frameworks: 
+    * Works with TensorFlow, PyTorch, XGBoost, and more.
+- Automated tuning: 
+    * Automatically finds the best hyperparameters for top model performance.
+- Simple deployment: 
+    * Deploy models as real-time APIs or batch jobs with minimal effort.
+- Continuous monitoring: 
+    * Model Monitor checks for drift, anomalies, and performance issues.
+- Model registry: 
+    * Handles versioning, approvals, and deployment history.
+- Strong integrations: 
+    * Works seamlessly with AWS services like S3, Glue, Lambda, and CloudWatch.
+- Secure and compliant: 
+    * Offers VPC support, encryption, and IAM control to protect your data.
+
+#### Use the Sagemaker when:
+- You need to train your own model
+- You want full control
+- You need AutoML, MLOps, pipelines
+- Bedrock’s pre-trained models are not enough 
+
+
+
+
+
 # Amazon Bedrock:
 Amazon bedrock is a service that provides access to large language models(LLM). It offers pre-trained LLMs and custom models built on top of these foundations.
 AWS Bedrock is a serverless platform that lets you use pre-trained Gen AI foundation model
