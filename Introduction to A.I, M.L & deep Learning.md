@@ -661,27 +661,16 @@ Use-case:
 | Scenario                    | AWS Service       |
 | --------------------------- | ----------------- |
 | Use LLMs / GenAI            | **Bedrock**       |
-| --------------------------- | ----------------- |
 | Fine-tune models            | **SageMaker**     |
-| --------------------------- | ----------------- |
 | Image recognition           | **Rekognition**   |
-| --------------------------- | ----------------- |
 | Extract text from documents | **Textract**      |
-| --------------------------- | ----------------- |
 | Sentiment analysis          | **Comprehend**    |
-| --------------------------- | ----------------- |
 | Speech → text               | **Transcribe**    |
-| --------------------------- | ----------------- |
 | Text → speech               | **Polly**         |
-| --------------------------- | ----------------- |
 | Build chatbot               | **Lex**           |
-| --------------------------- | ----------------- |
 | Enterprise search           | **Kendra**        |
-| --------------------------- | ----------------- |
 | Custom ML training          | **SageMaker**     |
-| --------------------------- | ----------------- |
 | Document QA with your data  | **Bedrock + RAG** |
-| --------------------------- | ----------------- |
 
 ### AI Responsibilities
 While building a model it is very important to make sure the AI is safe, fair, and trustworthy.
