@@ -1197,7 +1197,7 @@ Translate = Text → text (different language)
 | Summarize text              | Bedrock    |
 | Extract text from documents | Textract   |
 
-
+# Amazon Kendra
 
 
 # Amazon Bedrock:
