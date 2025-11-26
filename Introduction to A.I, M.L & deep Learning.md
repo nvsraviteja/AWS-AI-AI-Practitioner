@@ -83,6 +83,16 @@ Machine learning is a subset of artificial intelligence that focuses on developi
 - Unsupervised learning: The algorithm works with unlabeled data, discovering patterns and structures within the data itself.
 - Reinforcement learning: An agent interacts with an environment, receiving rewards or penalties based on actions taken. It learns optimal behavior through trial and error.
 
+| ML Type            | Data Type       | Example             | AWS Exam Clue         |
+| ------------------ | --------------- | ------------------- | --------------------- |
+| **Supervised**     | Labeled         | Spam, Price         | Has correct answer    |
+| **Regression**     | Numbers         | Price prediction    | “Predict value”       |
+| **Classification** | Categories      | Spam/Not spam       | “Classify”            |
+| **Unsupervised**   | No labels       | Customer groups     | “Group similar items” |
+| **Clustering**     | Groups          | Market segmentation | “Cluster”             |
+| **Reinforcement**  | Rewards         | Game bots           | “Reward, agent”       |
+| **Deep Learning**  | Neural networks | Image recognition   | “Neural network / DL” |
+
 AI is not equal to ML 
 - AI, it can be any model or system that mimics human intelligence.
 - ML is a type of AI that uses statistical methods to learn from data and make predictions or decisions.
